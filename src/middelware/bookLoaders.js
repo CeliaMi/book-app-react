@@ -1,6 +1,7 @@
-import {  getOneBook, deleteBook, updateBook } from "../services/BookService"
+import {  getOneBook } from "../services/BookService"
 
 export const loaderOneBook = async({ params }) => {
-    getOneBook(params)
-    return { book };
+    const res = await getOneBook(params.id)
+    const book = await res.data
+    return book;
 }
