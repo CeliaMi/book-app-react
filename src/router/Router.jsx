@@ -1,7 +1,7 @@
 import { createBrowserRouter, useParams } from "react-router-dom"
 import { Home } from "../pages/Home";
 import { getAllBooks, getOneBook, createBook } from "../services/BookService";
-// import { EditBook } from "../pages/EditBook";
+import { EditBook } from "../pages/EditBook";
 import { BookDetail } from "../pages/BookDetail"
 import { loaderOneBook } from "../middelware/bookLoaders"
 import BookCard from "../components/BookCard";
@@ -19,11 +19,11 @@ const router = createBrowserRouter([
         loader: loaderOneBook,
         element: <BookDetail/>
     },
-    // {
-    //     path: "/editBook/:id",
-    //     loader: createBook,
-    //     element: <EditBook/>
-    // },
+    {
+        path: "/editBook/:id",
+        //loader: createBook,
+        element: <EditBook/>
+    },
 
   ]);
   
