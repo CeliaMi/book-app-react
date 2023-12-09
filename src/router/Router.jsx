@@ -6,8 +6,6 @@ import { loadAllBooks, loadOneBook } from "../middelware/bookLoaders";
 import BookCard from "../components/BookCard";
 import LayoutPublic from "../layout/layoutPublic";
 import NotFound from "../pages/NotFound";
-import { Home } from "../pages/Home";
-
 
 const router = createBrowserRouter([
 

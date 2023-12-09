@@ -8,7 +8,7 @@ export const EditBook = () => {
 
  const [title, setTitle] = useState(book.title)
  const [writer, setWriter] = useState(book.writer)
- const [ description, setDescription] = useState(book.book_description)
+ const [description, setDescription] = useState(book.book_description)
 
  const navigate = useNavigate()
 

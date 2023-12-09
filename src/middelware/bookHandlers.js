@@ -1,4 +1,4 @@
-import { updateBook } from "../services/BookService"
+import { updateBook, createBook } from "../services/BookService"
 
 
 
@@ -6,7 +6,6 @@ export const handlerUpdateBook = async ( { editedBook } ) =>{
     if(!editedBook){
         return;
     }
-    console.log(editedBook)
     
     const editedBookStructure = {
         "id" : editedBook.bookId,
@@ -16,7 +15,19 @@ export const handlerUpdateBook = async ( { editedBook } ) =>{
     }
     console.log(editedBookStructure)
 
-    const res = await updateBook( editedBookStructure )
+    const res = await updateBook(editedBookStructure)
+    return res;
+}
+
+export const handlerCreateBook = async ({ newBook }) =>{
+
+    const newBookStructure = {
+        "title": newBook.title,
+        "writer": newBook.writer,
+        "book_description": newBook.description
+    }
+
+    const res = await createBook(newBookStructure)
     return res;
 }
 
