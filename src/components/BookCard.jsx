@@ -12,6 +12,7 @@ const BookCard = () => {
             <h4>{book.title}</h4>
             <h6>✍: {book.writer}</h6>
             <button><Link to={`/detail/${book.id}`}>Detail</Link></button>
+            <button><Link to={`/editBook/${book.id}`}>Edit</Link></button>
         </article>
       )
     })}
