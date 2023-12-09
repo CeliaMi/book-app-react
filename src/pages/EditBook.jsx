@@ -1,13 +1,16 @@
 import { useState } from 'react'
-import { useLoaderData, Link } from 'react-router-dom'
+import { useLoaderData, Link , useNavigate} from 'react-router-dom'
 import { handlerUpdateBook } from '../middelware/bookHandlers'
 
 export const EditBook = () => {
 
  const { book } = useLoaderData();
+
  const [title, setTitle] = useState(book.title)
  const [writer, setWriter] = useState(book.writer)
  const [ description, setDescription] = useState(book.book_description)
+
+ const navigate = useNavigate()
 
 const handleTitleChange = (event) => {
   const titleInput = event.target.value;
@@ -30,6 +33,7 @@ const handleTitleChange = (event) => {
   const  editedBook  = { title, writer, description, bookId }
   console.log(editedBook)
   handlerUpdateBook( { editedBook })
+  navigate('/')
  }
  
 
