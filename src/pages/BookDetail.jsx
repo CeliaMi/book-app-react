@@ -3,7 +3,7 @@ import { useLoaderData, Link } from "react-router-dom"
 
 export const BookDetail =() => {
 
-  const book  = useLoaderData()
+  const { book } = useLoaderData()
   return (
         <article key={book.id}>
             <h4>{book.title}</h4>

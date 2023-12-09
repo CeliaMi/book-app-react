@@ -6,7 +6,7 @@ const BookCard = () => {
   const books = useLoaderData()
   return (
     <>
-    {books.data.map(book => {
+    {books.map(book => {
       return(  
         <article key={book.id}>
             <h4>{book.title}</h4>

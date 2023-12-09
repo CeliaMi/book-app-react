@@ -9,7 +9,6 @@ import axios from "axios";
 
     export const getOneBook = async (id) => {
         const res = await axios.get(`${API_URL}/${id}`);
-        console.log(res)
         return res;
     };
 
