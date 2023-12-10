@@ -14,7 +14,7 @@ const LayoutPublic = () =>{
           )}   
             <Outlet/>
         </main>
-        <footer className="text-gray-400 mb-1 py-10 p-2 w-full border-t border-gray-800 bg-gray-800 text-center bg-opacity-40"> Esperamos que disfrutes de tus próximos viajes 🪐</footer>
+        <footer className="text-gray-400 mb-1 py-10 p-2 w-full border-t border-gray-800 bg-gray-800 text-center bg-opacity-40 fixed bottom-0 w-full"> Esperamos que disfrutes de tus próximos viajes 🪐</footer>
       </div>
     )
 }
