@@ -6,7 +6,7 @@ import { useLoaderData } from "react-router-dom"
     const books = useLoaderData()
   return (
     <>
-    <h1>Home</h1>
+    <h1>Libros bonitos para Leer y viajar🐱‍🚀</h1>
     <section>
          <BookCard books = {books} />
     </section>
