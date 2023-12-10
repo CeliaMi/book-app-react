@@ -2,10 +2,9 @@ import { createBrowserRouter } from "react-router-dom"
 import { EditBook } from "../pages/EditBook";
 import { BookDetail } from "../pages/BookDetail"
 import CreateBook from "../pages/CreateBook";
-import { loadAllBooks, loadOneBook } from "../middelware/bookLoaders";
-import BookCard from "../components/BookCard";
-import LayoutPublic from "../layout/layoutPublic";
+import { loadAllBooks, loadOneBook } from "../middelware/bookLoaders";import LayoutPublic from "../layout/layoutPublic";
 import NotFound from "../pages/NotFound";
+import Home from "../pages/Home";
 
 const router = createBrowserRouter([
 
@@ -18,26 +17,31 @@ const router = createBrowserRouter([
         {
           errorElement: <NotFound />,
           children:[
-    
-              {
-                index: true,
-                loader: loadAllBooks,
-                element: <BookCard/>
-              },
-              {
-                  path: "/detail/:id",
-                  loader: loadOneBook,
-                  element: <BookDetail/>
-              },
-              {
-                  path: "/editBook/:id",
-                  loader: loadOneBook,
-                  element: <EditBook/>
-              },
-              {
-                path: "/newBook",
-                element: <CreateBook/>
-              },
+            {
+              index: true,
+              loader: loadAllBooks,
+              element:<Home/>
+            },
+            {
+              path: "/books",
+              element: <Home/>,
+              loader: loadAllBooks,
+            },
+            {
+              path: "/books/:id",
+              loader: loadOneBook,
+              element: <BookDetail/>
+            },
+            {
+              path: "/editBook/:id",
+              loader: loadOneBook,
+              element: <EditBook/>
+            },
+            {
+              path: "/newBook",
+              element: <CreateBook/>
+            },
+
           ]}
       ]}
 

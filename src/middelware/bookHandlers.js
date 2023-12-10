@@ -1,4 +1,4 @@
-import { updateBook, createBook } from "../services/BookService"
+import { updateBook, createBook, deleteBook } from "../services/BookService"
 
 
 
@@ -28,6 +28,11 @@ export const handlerCreateBook = async ({ newBook }) =>{
     }
 
     const res = await createBook(newBookStructure)
+    return res;
+}
+
+export const handlerDeleteBook = async (id) => {
+    const res = await deleteBook(id)
     return res;
 }
 

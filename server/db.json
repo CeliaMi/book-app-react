@@ -9,7 +9,7 @@
     {
       "id": 2,
       "title": "The Photo Ark",
-      "writer": "Joel Sartoreee",
+      "writer": "Joel Sartore",
       "book_description": "El proyecto Photo Ark de National Geographic, dirigido por el fotógrafo Joel Sartore, es una iniciativa para documentar a todas las especies que viven en zoos y santuarios de fauna salvaje, inspirar acciones a través de la educación y ayudar a salvar a los animales apoyando iniciativas de conservación sobre el terreno."
     },
     {
@@ -17,12 +17,6 @@
       "title": "Cien años de soledad ",
       "writer": "Gabriel García Márquez",
       "book_description": "Cien años de soledad trata un siglo en la vida de la familia Buendía, cuyo patriarca, José Arcadio Buendía, fundó el pueblo ficticio de Macondo, en Colombia. La novela es considerada una obra maestra de la literatura latinoamericana y uno de los ejemplos clásicos del realismo mágico."
-    },
-    {
-      "title": "celia",
-      "writer": "celia",
-      "book_description": "celia",
-      "id": 4
     }
   ]
 }
