@@ -8,7 +8,7 @@ const LayoutPublic = () =>{
     return (
         <div className="layout" >
         <Navbar/>
-        <main className="container nav justify-content-center ">
+        <main className="text-gray-400 bg-gray-900 body-font relative">
           {navigation.state === "loading" && (
             <div className="alert alert-info my-5">Loading...</div>
           )}   

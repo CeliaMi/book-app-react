@@ -5,12 +5,11 @@ import { useLoaderData } from "react-router-dom"
  const Home = () => {
     const books = useLoaderData()
   return (
-    <>
-    <h1>Libros bonitos para Leer y viajar🐱‍🚀</h1>
-    <section>
-         <BookCard books = {books} />
+    <section className="flex flex-col text-center w-full mb-12">
+      <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white" >Libros bonitos para Leer y viajar🐱‍🚀</h1>
+      <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Leer Leer y Leer</p>
+          <BookCard books = {books} />
     </section>
-    </>
   )
 }
 export default Home
