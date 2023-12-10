@@ -33,21 +33,26 @@ const CreateBook = () => {
 
 
     return (
-        <>
+        <section className='lg:w-1/2 md:w-2/3 mx-auto'>
+   
           <h3>¿Qué nuevo libro quieres añadir?</h3>
-          <form onSubmit={handleSubmit} >
+          <form onSubmit={handleSubmit} className='flex flex-wrap -m-2' >
+            <div className='p-2 w-full'>
+              <div className='relative'>
     
-            <label htmlFor="title">Títlo:</label>
-            <input type="text" name="title" id="title" onChange={handleTitleChange}/>
-            <label htmlFor="writer">Autora:</label>
-            <input type="text" name="writer" id="writer" onChange={handleWriterChange}/>
-            <label htmlFor="book_description">Descripcion:</label>
-            <input type="text" name="book_description" id="book_description"  onChange={handleDescriptionChange}  />
-            <button type="submit"> Añadir nuevo Libro✨</button>
-            <button><Link to={"/"}>Back</Link></button>
-    
+                <label htmlFor="title" className='eading-7 text-sm text-gray-400'>Títlo:</label>
+                <input type="text" name="title" id="title" onChange={handleTitleChange} className='w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out mb-5'/>
+                <label htmlFor="writer" className='eading-7 text-sm text-gray-400'>Autora:</label>
+                <input type="text" name="writer" id="writer" onChange={handleWriterChange} className='w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out mb-5'/>
+                <label htmlFor="book_description" className='eading-7 text-sm text-gray-400' >Descripcion:</label>
+                <input type="text" name="book_description" id="book_description"  onChange={handleDescriptionChange} className='w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out'  />
+                <button type="submit" className='inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-5'> Añadir nuevo Libro✨</button>
+                <button className='ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg mt-5'><Link to={"/"}>Back</Link></button>
+
+              </div>
+            </div>
           </form>
-        </>
+        </section>
       )
 }
 

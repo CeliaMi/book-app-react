@@ -6,16 +6,16 @@ const LayoutPublic = () =>{
     const navigation = useNavigation()
 
     return (
-        <div className="layout" >
+      <div className="bg-gray-900 min-h-screen" >
         <Navbar/>
-        <main className="text-gray-400 bg-gray-900 body-font relative">
+        <main className="text-gray-400 bg-gray-900 body-font relative container px-5 py-24 mx-auto">
           {navigation.state === "loading" && (
-            <div className="alert alert-info my-5">Loading...</div>
+            <div className='bg-indigo-400 bg-opacity-30 p-8 rounded m-6 p-2 lg:w-1/2 md:w-2/3 mx-auto'>Loading...</div>
           )}   
             <Outlet/>
         </main>
-        <footer className="footer mt-auto py-3 bg-body-tertiary"></footer>
-        </div>
+        <footer className="text-gray-400 mb-1 py-10 p-2 w-full border-t border-gray-800 bg-gray-800 text-center bg-opacity-40"> Esperamos que disfrutes de tus próximos viajes 🪐</footer>
+      </div>
     )
 }
 
