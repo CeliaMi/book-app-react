@@ -3,29 +3,57 @@ import axios from "axios";
     export const API_URL = "http://localhost:3000/books";
     
     export const getAllBooks = async () => {
+        try {
         const res = await axios.get(API_URL);
         return res;
+        } catch (error){
+            console.error('getAllBooks error ', error.message);
+            throw error;
+
+        }
     };
 
     export const getOneBook = async (id) => {
-        const res = await axios.get(`${API_URL}/${id}`);
-        return res;
+        try {
+            const res = await axios.get(`${API_URL}/${id}`);
+            return res;
+        } catch (error) {
+            console.error(`getOneBook ID ${id} error:`, error.message);
+            throw error;
+          }
+
     };
 
     export const createBook = async (data) => {
-        const res = await axios.post(API_URL, data);
-        return res;
+        try {
+            const res = await axios.post(API_URL, data);
+            return res;
+        }  catch (error) {
+            console.error('createBook error:', error.message);
+            throw error;
+          }
+
     };
 
     export const deleteBook = async (id) => {
+        try{
         let URL_ID = `${API_URL}/${id}`;
         const res = await axios.delete(URL_ID);
         return res;
-    }
+        }  catch (error) {
+            console.error(`deleteBook ID ${id} error:`, error.message);
+            throw error;
+        }}
 
     export const updateBook = async (data) => {
+        try{
         let URL_ID = `${API_URL}/${data.id}`;
         const res = await axios.put(URL_ID, data);
         return res;
+        } catch {
+            console.error(`Error en updateBook con ID ${data.id}:`, error.message);
+            throw error;
+        }
     };
+    
  
