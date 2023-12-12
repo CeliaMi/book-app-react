@@ -1,9 +1,8 @@
-import { Outlet, useNavigation } from "react-router-dom"
+import { Outlet } from "react-router-dom"
 import Navbar from "../components/Navbar"
 
 const LayoutPublic = () =>{
 
-    const navigation = useNavigation()
 
     return (
       <div className="bg-gray-900 min-h-screen" >
