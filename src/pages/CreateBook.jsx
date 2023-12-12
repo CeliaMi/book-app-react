@@ -1,14 +1,15 @@
-import { useNavigate, Link  } from "react-router-dom";
+import {  Link, useNavigate  } from "react-router-dom";
 import { useState } from "react";
 import { handlerCreateBook } from "../middelware/bookHandlers"
+
 const CreateBook = () => {
 
   const [title, setTitle] = useState()
   const [writer, setWriter] = useState()
   const [description, setDescription] = useState()
  
-  const navigate = useNavigate()
- 
+const navigate = useNavigate()
+
  const handleTitleChange = (event) => {
    const titleInput = event.target.value;
    setTitle(titleInput)
@@ -26,9 +27,14 @@ const CreateBook = () => {
 
   const handleSubmit = (event) => {
    event.preventDefault();
-   const  newBook  = { title, writer, description }
-   handlerCreateBook( { newBook })
-   navigate('/')
+   try{
+    const  newBook  = { title, writer, description }
+    handlerCreateBook( { newBook })
+    navigate('/')
+   } catch {
+    console.error('Error creating post:', error);
+  }
+   
   }
 
 

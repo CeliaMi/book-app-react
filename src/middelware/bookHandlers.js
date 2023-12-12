@@ -31,8 +31,3 @@ export const handlerCreateBook = async ({ newBook }) =>{
     return res;
 }
 
-export const handlerDeleteBook = async (id) => {
-    const res = await deleteBook(id)
-    return res;
-}
-
