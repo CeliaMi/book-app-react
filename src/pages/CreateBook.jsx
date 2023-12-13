@@ -66,10 +66,11 @@ const navigate = useNavigate()
                 <button className='ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg mt-5'><Link to={"/"}>Back</Link></button>
 
                 {successMessage && 
-                <div className="lg:w-1/2 md:w-2/3 mx-auto absolute top-0 left-0 w-full h-full border-indigo-500 bg-indigo-800 flex items-center justify-center">
-                <h1 className="text-9xl">✋🏽</h1>
-                <p className=" text-purple-400 tracking-widest font-medium title-font mb-1">
-                COMPROMISO REALIZADO CON ÉXITO</p>
+                <div className=" mx-auto absolute top-0 left-0 w-full h-full border-indigo-500 bg-indigo-800 flex items-center justify-center">
+                  <h1 className="text-9xl">✋🏽</h1>
+                  <p className=" text-purple-400 tracking-widest font-medium title-font mb-1">
+                  COMPROMISO REALIZADO CON ÉXITO</p>
+                  <h1 className="text-9xl">✋🏽</h1>
                 </div>}
 
               </div>

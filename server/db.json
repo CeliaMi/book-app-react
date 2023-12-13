@@ -1,22 +1,10 @@
 {
   "Books": [
     {
-      "title": "vcvxvx",
-      "writer": "vcvcvcv",
-      "book_description": "nbbj",
+      "title": "Cien años de soledad",
+      "writer": "Gabriel García Márquez",
+      "book_description": "Cien años de soledad trata un siglo en la vida de la familia Buendía, cuyo patriarca, José Arcadio Buendía, fundó el pueblo ficticio de Macondo, en Colombia. La novela es considerada una obra maestra de la literatura latinoamericana y uno de los ejemplos clásicos del realismo mágico.",
       "id": 1
-    },
-    {
-      "id": 2,
-      "title": "jhjfbdf",
-      "writer": "dfdf",
-      "book_description": "dfdfdfdf"
-    },
-    {
-      "title": "dfdf",
-      "writer": "dfdf",
-      "book_description": "dfdf",
-      "id": 3
     }
   ]
 }
