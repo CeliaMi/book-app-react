@@ -11,6 +11,7 @@ const CreateBook = () => {
 
     const handleForm = ( newBook ) =>{
       handlerCreateBook(newBook)
+      navigate('/')
     }
     return (
         <section className='lg:w-1/2 md:w-2/3 mx-auto'>
