@@ -1,6 +1,6 @@
 import axios from "axios";
 
-    export const API_URL = "http://localhost:3000/books";
+    export const API_URL = "http://localhost:3000/Books";
     
     export const getAllBooks = async () => {
         try {
@@ -9,7 +9,6 @@ import axios from "axios";
         } catch (error){
             console.error('getAllBooks error ', error.message);
             throw error;
-
         }
     };
 
@@ -37,6 +36,7 @@ import axios from "axios";
 
     export const deleteBook = async (id) => {
         try{
+        console.log("hola")
         let URL_ID = `${API_URL}/${id}`;
         const res = await axios.delete(URL_ID);
         return res;
@@ -50,7 +50,7 @@ import axios from "axios";
         let URL_ID = `${API_URL}/${data.id}`;
         const res = await axios.put(URL_ID, data);
         return res;
-        } catch {
+        } catch(error) {
             console.error(`Error en updateBook con ID ${data.id}:`, error.message);
             throw error;
         }

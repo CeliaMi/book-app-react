@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom"
 import { EditBook } from "../pages/EditBook";
 import { BookDetail } from "../pages/BookDetail"
 import CreateBook from "../pages/CreateBook";
-import { loadAllBooks, loadOneBook } from "../middelware/bookLoaders";import LayoutPublic from "../layout/layoutPublic";
+import { loadAllBooks, loadOneBook } from "../middleware/bookLoaders";import LayoutPublic from "../layout/layoutPublic";
 import NotFound from "../pages/NotFound";
 import Home from "../pages/Home";
 

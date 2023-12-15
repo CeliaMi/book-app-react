@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useLoaderData, Link , useNavigate} from 'react-router-dom'
-import { handlerUpdateBook } from '../middelware/bookHandlers'
+import { handlerUpdateBook } from '../middleware/bookHandlers'
 
 export const EditBook = () => {
 
