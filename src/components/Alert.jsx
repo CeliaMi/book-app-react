@@ -1,10 +1,9 @@
 import React from 'react'
 
-const Alert = () => {
+const Alert = ({text}) => {
   return (
-    <div className="bg-indigo-100 border-t border-b border-indigo-500 text-blue-700 px-4 py-3" role="alert">
-        <p className="font-bold">Atención</p>
-        <p className="text-sm">No olvide Rellenar todos los campos.</p>
+    <div className="rounded ring-indigo-600 bg-opacity-20 bg-indigo-800 text-indigo-400 px-4 py-2" role="alert">
+        <p className="text-sm">*{text}</p>
     </div>
   )
 }
