@@ -37,7 +37,7 @@ const handleTitleChange = (event) => {
  }
  
 
-
+     
   return (
     <section className='lg:w-1/2 md:w-2/3 mx-auto'>
       <h3>¿Qué quieres actualizar?</h3>
@@ -52,7 +52,7 @@ const handleTitleChange = (event) => {
 
 
               <label htmlFor="book_description" className='eading-7 text-sm text-gray-400 '>Descripcion:</label>
-              <input type="text" name="book_description" id="book_description"  onChange={handleDescriptionChange} value={ description ? description : book.book_description } placeholder={book.book_description} className='
+              <textarea type="text" name="book_description" id="book_description"  onChange={handleDescriptionChange} value={ description ? description : book.book_description } placeholder={book.book_description} className='
               w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out text-ellipsis overflow-hidden' />
 
               <button type="submit" className='inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-5'> Atualizar✨</button>

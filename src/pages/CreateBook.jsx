@@ -17,7 +17,7 @@ const CreateBook = () => {
         <section className='lg:w-1/2 md:w-2/3 mx-auto'>
 
    
-          <h3>¿Qué nuevo libro te comprometes a Leer?</h3>
+          <h3 className="text-purple-400 tracking-widest font-medium title-font mb-4">¿Qué nuevo libro te comprometes a Leer?</h3>
                 {/* <div className=" mx-auto absolute top-0 left-0 w-full h-full border-indigo-500 bg-indigo-800 flex items-center justify-center">
                   <h1 className="text-9xl">✋🏽</h1>
                   <p className=" text-purple-400 tracking-widest font-medium title-font mb-1">
@@ -45,7 +45,7 @@ const CreateBook = () => {
                 {errors.writer?.type === 'minLength' && <Alert text={"El campo autora debe tener almenos 2 caracteres"}/>}
 
                 <label htmlFor="book_description" className='eading-7 text-sm text-gray-400' >Descripcion:</label>
-                <input type="text" name="book_description" id="book_description" { ...register("book_description", { minLength: 10, required: true }) } className='w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out' />
+                <textarea type="text" name="book_description" id="book_description" { ...register("book_description", { minLength: 10, required: true }) } className='w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out' />
 
                 {errors.book_description?.type === 'required' && <Alert text={"El campo descripción es requerido"}/>}
                 {errors.book_description?.type === 'minLength' && <Alert text={"No seas así...cuentanos un poco más..."}/>}
