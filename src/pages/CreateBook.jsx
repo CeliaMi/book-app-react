@@ -1,4 +1,4 @@
-import {  Link, useNavigate  } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import { handlerCreateBook } from "../middleware/bookHandlers"
 import Alert from "../components/Alert";
 import { useForm } from "react-hook-form";
@@ -6,24 +6,20 @@ import Modal from "../components/Modal";
 
 const CreateBook = () => {
 
-  const navigate = useNavigate()
 
   const { register, handleSubmit, formState: { errors, isSubmitSuccessful } } = useForm()
 
     const handleForm = ( newBook ) =>{
       handlerCreateBook(newBook)
     }
+
+
     return (
         <section className='lg:w-1/2 md:w-2/3 mx-auto'>
 
    
-          <h3 className="text-purple-400 tracking-widest font-medium title-font mb-4">¿Qué nuevo libro te comprometes a Leer?</h3>
-                {/* <div className=" mx-auto absolute top-0 left-0 w-full h-full border-indigo-500 bg-indigo-800 flex items-center justify-center">
-                  <h1 className="text-9xl">✋🏽</h1>
-                  <p className=" text-purple-400 tracking-widest font-medium title-font mb-1">
-                  COMPROMISO REALIZADO CON ÉXITO</p>
-                  <h1 className="text-9xl">✋🏽</h1>
-                </div>} */}
+          <h3 className="text-purple-400 tracking-widest font-medium title-font mb-4">
+          ¿Qué nuevo libro te comprometes a Leer?</h3>
 
           <form onSubmit={handleSubmit(handleForm)} className='flex flex-wrap -m-2' >
             
@@ -59,7 +55,7 @@ const CreateBook = () => {
               </div>
             </div>
           </form>
-          { isSubmitSuccessful && <Modal/> }
+          { isSubmitSuccessful && <Modal message={"✋🏽 COMPROMISO REALIZADO CON ÉXITO"}/> }
         </section>
         
       )
