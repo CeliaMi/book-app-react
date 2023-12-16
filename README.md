@@ -27,4 +27,4 @@ npm run dev
 
 ### Stack
 React 
->Hooks : useLoaderData + useState + UseNavigate
+>Hooks : useLoaderData + useState + UseNavigate + useForm
