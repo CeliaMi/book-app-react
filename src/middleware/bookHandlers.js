@@ -7,7 +7,7 @@ export const handlerUpdateBook = async ( { editedBook } ) =>{
         return;
     }
     const res = await updateBook(editedBook)
-    return res;
+    return {res};
 }
 
 export const handlerCreateBook = async ( newBook ) =>{

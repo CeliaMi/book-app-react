@@ -4,6 +4,7 @@ import { deleteBook } from '../services/BookService'
 export const BookDetail =() => {
 
   const { book } = useLoaderData()
+
   return (
         <article className='bg-gray-800 bg-opacity-40 p-8 rounded m-6 p-2 lg:w-1/2 md:w-2/3 mx-auto' key={book.id} >
             <h5 className='text-xs text-purple-400 tracking-widest font-medium title-font mb-1'>TÍTULO</h5>

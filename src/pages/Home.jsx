@@ -15,7 +15,6 @@ import { Link } from "react-router-dom"
           <BookCard books = {books} />
         </>
         ):(
-
           <>
           <article className='bg-indigo-400 bg-opacity-30 p-8 rounded m-6 p-2 lg:w-1/2 md:w-2/3 mx-auto'>¡Ojo! ¡Atención! aviso a navegantes, cada vez que usted escriba un libro en esta lista se estará comprometiendo firmemente a leerlo...</article>
           <article className='bg-gray-800 bg-opacity-40 p-8 rounded p-2 lg:w-1/2 md:w-2/3 mx-auto'>
