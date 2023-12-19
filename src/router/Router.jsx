@@ -2,9 +2,10 @@ import { createBrowserRouter } from "react-router-dom"
 import { EditBook } from "../pages/EditBook";
 import { BookDetail } from "../pages/BookDetail"
 import CreateBook from "../pages/CreateBook";
-import { loadAllBooks, loadOneBook } from "../middleware/bookLoaders";import LayoutPublic from "../layout/layoutPublic";
+import { loadOneBook } from "../middleware/bookLoaders";import LayoutPublic from "../layout/layoutPublic";
 import NotFound from "../pages/NotFound";
 import Home from "../pages/Home";
+import { getAllBooks } from "../services/BookService";
 
 const router = createBrowserRouter([
 
@@ -19,13 +20,13 @@ const router = createBrowserRouter([
           children:[
             {
               index: true,
-              loader: loadAllBooks,
+              loader: getAllBooks ,
               element:<Home/>
             },
             {
               path: "/books",
               element: <Home/>,
-              loader: loadAllBooks,
+              loader: getAllBooks ,
             },
             {
               path: "/books/:id",

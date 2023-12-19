@@ -5,7 +5,7 @@ import axios from "axios";
     export const getAllBooks = async () => {
         try {
         const res = await axios.get(API_URL);
-        return res;
+        return res.data ;
         } catch (error){
             console.error('getAllBooks error ', error.message);
             throw error;

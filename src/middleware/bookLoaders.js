@@ -1,10 +1,4 @@
-import {  getAllBooks, getOneBook } from "../services/BookService"
-
-export const loadAllBooks = async () => {
-    const res = await getAllBooks()
-    const books = await res.data
-    return books;
-}
+import {   getOneBook } from "../services/BookService"
 
 
 export const loadOneBook = async ({ params }) => {
