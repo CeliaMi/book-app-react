@@ -14,7 +14,7 @@ const BookCard = ({ books }) => {
                   <h6 className='title-font font-medium text-whitleading-relaxed mb-6 '>de {book.writer}</h6>
                   <button className='ml-4 inline-flex text-gray-400 bg-indigo-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg'><Link to={`/books/${book.id}`}>Detail</Link></button>
                   <button className='ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg'><Link to={`/editBook/${book.id}`}>Edit</Link></button>
-                  <button className='ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg'><Link onClick={() => deleteBook(book.id)}>delete</Link></button>
+                  <button className='ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg'><Link onClick={() => deleteBook(book.id)} to={'/'}>delete</Link></button>
                 </article>
             )})}
 
