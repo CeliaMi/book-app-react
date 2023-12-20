@@ -15,19 +15,11 @@ export const EditBook = () => {
 
 }})
 
-
-
- 
  const handleForm = (  editedBook ) => {
-  editedBook.id = book.id
-  console.log(editedBook)
-  handlerUpdateBook( { editedBook })
+    editedBook.id = book.id
+    console.log(editedBook)
+    handlerUpdateBook( { editedBook })
  }
-
- 
-
-
-
 
   return (
     <section className='lg:w-1/2 md:w-2/3 mx-auto'>
