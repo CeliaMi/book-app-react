@@ -10,7 +10,7 @@ Para poder hacer uso de esta aplicación web debes poner en la terminal los sigu
 1️⃣ descarga el proyecto
 
 ```
-git clone https://github.com/CeliaMi/happy-faces-app.git
+git clone https://github.com/CeliaMi/book-app-react.git
 ```
 2️⃣ Instala las **dependencias**:
 ```
